@@ -1,0 +1,13 @@
+services:
+
+    scout.health_form.swimming:
+        class: ScoutEvent\SwimmingBundle\Form\SwimmingStepProvider
+        arguments: [ @doctrine.orm.entity_manager ]
+        tags:
+            - { name: scout.form.flow.healthForm.stage }
+
+    scout.event.swimming:
+        class: ScoutEvent\SwimmingBundle\Form\SwimmingEventProvider
+        arguments: [ @doctrine.orm.entity_manager ]
+        tags:
+            - { name: scout.event.addition }

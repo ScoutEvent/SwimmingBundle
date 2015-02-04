@@ -1,0 +1,37 @@
+{
+    "name" : "ScoutEvent/SwimmingBundle",
+    "description" : "Add swimming option to the event which adds a stage to the health form.",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "Chris Staite",
+        "email" : "chris@yourdreamnet.co.uk"
+    }],
+    "keywords" : [
+        "Scout Event Management"
+    ],
+    "license" : [
+        "GPL"
+    ],
+    "require" : {
+        "ScoutEvent/ManagementBundle": ">=0.1-dev",
+        "ScoutEvent/DataBundle": ">=0.1-dev"
+    },
+    "autoload" : {
+        "psr-0" : {
+            "ScoutEvent\\SwimmingBundle" : ""
+        }
+    },
+    "target-dir" : "ScoutEvent/SwimmingBundle",
+    "repositories" : [{
+        "type" : "vcs",
+        "url" : "https://github.com/ScoutEvent/ManagementBundle.git"
+    }, {
+        "type" : "vcs",
+        "url" : "https://github.com/ScoutEvent/DataBundle.git"
+    }],
+    "extra" : {
+        "branch-alias" : {
+            "dev-master" : "0.1-dev"
+        }
+    }
+}
