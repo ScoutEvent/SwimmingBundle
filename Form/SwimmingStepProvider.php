@@ -58,7 +58,7 @@ class SwimmingStepProvider extends HealthFormAdditionalStepProvider
             $new = true;
         }
         
-        print_r($flow->getStorage()->get($flow->getStepDataKey(), array()););
+        print_r($flow->getStorage()->get($flow->getStepDataKey(), array()));
 
         /*
         $swimming->setCanSwim($form->get('swimming')->getData());
