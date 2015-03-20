@@ -15,7 +15,7 @@ class EventSwimming
     /**
      * @ORM\Id
      * @ORM\OneToOne(targetEntity="ScoutEvent\DataBundle\Entity\Event")
-     * @ORM\JoinColumn(name="event_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="event_id", referencedColumnName="id", nullable=true, onDelete="cascade")
      */
     private $event;
 

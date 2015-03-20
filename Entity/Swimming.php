@@ -15,7 +15,7 @@ class Swimming
     /**
      * @ORM\Id
      * @ORM\OneToOne(targetEntity="ScoutEvent\DataBundle\Entity\Participant")
-     * @ORM\JoinColumn(name="participant_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="participant_id", referencedColumnName="id", nullable=true, onDelete="cascade")
      */
     private $participant;
 
