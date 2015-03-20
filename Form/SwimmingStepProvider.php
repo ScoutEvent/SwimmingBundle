@@ -57,7 +57,7 @@ class SwimmingStepProvider extends HealthFormAdditionalStepProvider
             $swimming = new Swimming($participant);
             $new = true;
         }
-        print_r($flow->retrieveStepData());
+        print_r($flow->getDataManager()->load($flow));
 
         /*
         $swimming->setCanSwim($form->get('swimming')->getData());
