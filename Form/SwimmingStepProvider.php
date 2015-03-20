@@ -41,7 +41,7 @@ class SwimmingStepProvider extends HealthFormAdditionalStepProvider
         return !$swimming->isSwimming();
     }
     
-    public function additionalProcess($form, $healthFormEntity)
+    public function additionalProcess($flow, $form, $healthFormEntity)
     {
         $participant = $healthFormEntity->getParticipant();
         if ($this->isSwimming($participant))
@@ -57,7 +57,12 @@ class SwimmingStepProvider extends HealthFormAdditionalStepProvider
             $swimming = new Swimming($participant);
             $new = true;
         }
+        print_r($flow->retrieveStepData());
+
+        /*
         $swimming->setCanSwim($form->get('swimming')->getData());
+        */
+        
         if ($new)
         {
             $this->em->persist($swimming);
