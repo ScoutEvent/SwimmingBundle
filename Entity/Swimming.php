@@ -32,6 +32,7 @@ class Swimming
     public function __construct($participant)
     {
         $this->participant = $participant;
+        $this->canSwim = false;
     }
 
     /**
